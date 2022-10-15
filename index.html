@@ -13,8 +13,14 @@
       <section class="title">
         <h1>Let's Play Tic-Tac-Toe!</h1>
       </section>
+      <p> Instructions: You (X) will play against the computer (O). Your aim is to get 3 X's in a row in any direction.
+        The computer will attempt to get 3 O's in a row as well. The first to get 3 in a row wins. Good luck! </p>
       <br>
-      <section class="container"> 
+      <section class="activePlayer">
+        <div class="alert alert-light" role="alert" id="currentPlayer">
+      </section>
+      <br>
+      <section class="container - sm"> 
         <button class="gameButton btn" id="0">0</div>
         <button class="gameButton btn" id="1">1</div>
         <button class="gameButton btn" id="2">2</div>
@@ -26,11 +32,9 @@
         <button class="gameButton btn" id="8">8</div>
       </section>
       <br>
-      <section class="banners">
-      <h2 class="currentPlayer" id="currentPlayer">Player 1's Turn!</h2>
-      <br>
-      <h2 class="Winner" id="winner"></h2> 
-    </section>
+      <!-- <section class="banners">
+        <div class="alert alert-light" role="alert" id="winner">
+      </section> -->
         <div class="NG">
           <button class="button btn" id="clearBoard">Clear Board</button>
         </div>

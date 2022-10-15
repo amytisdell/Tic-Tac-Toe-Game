@@ -1,3 +1,5 @@
+document.getElementById("currentPlayer").innerText="Player's Turn!";
+
 
 //GameButtons
 const gameButton0 = document.getElementById("0");
@@ -16,64 +18,69 @@ const gameSquares = [gameButton0, gameButton1, gameButton2, gameButton3, gameBut
 
 // Reset Button 
 function clearBoard () {
-    document.getElementsByClassName("container").innerHTML=""; 
-    const gameSquares = [gameButton0, gameButton1, gameButton2, gameButton3, gameButton4, 
-        gameButton5, gameButton6, gameButton7, gameButton8]
+    window.location.reload();
 }
 
 document.getElementById("clearBoard").addEventListener("click", () => {
-    clearBoard(); 
-    console.log(gameSquares);
-});
+    clearBoard()
+    });
+
+//disable all buttons
+function disableAll() {
+    document.getElementById("0").disabled = true;
+    document.getElementById("1").disabled = true;
+    document.getElementById("2").disabled = true;
+    document.getElementById("3").disabled = true;
+    document.getElementById("4").disabled = true;
+    document.getElementById("5").disabled = true;
+    document.getElementById("6").disabled = true;
+    document.getElementById("7").disabled = true;
+    document.getElementById("8").disabled = true;
+}
+
+
 
 //Checking each player's scores 
 function checkPlayer1Scores() {
     if ((gameButton0.innerText == ("X")) && (gameButton1.innerText == ("X")) && (gameButton2.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText="";
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton3.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton5.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton6.innerText == ("X")) && (gameButton7.innerText == ("X")) && (gameButton8.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton0.innerText == ("X")) && (gameButton3.innerText == ("X")) && (gameButton6.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton1.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton7.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton2.innerText == ("X")) && (gameButton5.innerText == ("X")) && (gameButton8.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton0.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton8.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     } else if ((gameButton2.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton6.innerText == ("X"))) {
-        document.getElementById("winner").innerText="Player 1 Wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        player1Wins = true; 
+        // document.getElementById("winner").innerText="Player 1 Wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
+        disableAll();
         throw new Error
     }
 }
@@ -81,52 +88,44 @@ function checkPlayer1Scores() {
 
 function checkComputerScores() {
     if ((gameButton0.innerText == ("O")) && (gameButton1.innerText == ("O")) && (gameButton2.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton3.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton5.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton6.innerText == ("O")) && (gameButton7.innerText == ("O")) && (gameButton8.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton0.innerText == ("O")) && (gameButton3.innerText == ("O")) && (gameButton6.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton1.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton7.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton2.innerText == ("O")) && (gameButton5.innerText == ("O")) && (gameButton8.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton0.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton8.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     } else if ((gameButton2.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton6.innerText == ("O"))) {
-        document.getElementById("winner").innerText="Computer wins!";
-        document.getElementById("currentPlayer").innerText=""
-        document.getElementsByClassName("gameButton card btn").disabled=true;
-        let computerWins = true; 
+        // document.getElementById("winner").innerText="Computer wins!";
+        document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
+        disableAll();
         throw new Error;
     }
 }
@@ -134,6 +133,8 @@ function checkComputerScores() {
 //game buttons 
 gameButton0.addEventListener('click', () =>  {
     gameButton0.innerText = ("X");
+    let button = document.getElementById("0");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("0").disabled = true;
     let index0 = gameSquares.indexOf(gameButton0);
     if (index0 > -1) { 
@@ -143,6 +144,8 @@ gameButton0.addEventListener('click', () =>  {
 });
 
 gameButton1.addEventListener('click', () =>  {
+    let button = document.getElementById("1");
+    button.style.backgroundColor="#14BDEB"
     gameButton1.innerText = ("X");
     document.getElementById("1").disabled = true;
     let index1 = gameSquares.indexOf(gameButton1);
@@ -154,6 +157,8 @@ gameButton1.addEventListener('click', () =>  {
 
 gameButton2.addEventListener('click', () =>  {
     gameButton2.innerText = ("X");
+    let button = document.getElementById("2");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("2").disabled = true;
     let index2 = gameSquares.indexOf(gameButton2);
     if (index2 > -1) { 
@@ -164,6 +169,8 @@ gameButton2.addEventListener('click', () =>  {
 
 gameButton3.addEventListener('click', () =>  {
     gameButton3.innerText = ("X");
+    let button = document.getElementById("3");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("3").disabled = true;
     let index3 = gameSquares.indexOf(gameButton3);
     if (index3 > -1) { 
@@ -174,6 +181,8 @@ gameButton3.addEventListener('click', () =>  {
 
 gameButton4.addEventListener('click', () =>  {
     gameButton4.innerText = ("X");
+    let button = document.getElementById("4");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("4").disabled = true;
     let index4 = gameSquares.indexOf(gameButton4);
     if (index4 > -1) { 
@@ -184,6 +193,8 @@ gameButton4.addEventListener('click', () =>  {
 
 gameButton5.addEventListener('click', () =>  {
     gameButton5.innerText = ("X");
+    let button = document.getElementById("5");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("5").disabled = true;
     let index5 = gameSquares.indexOf(gameButton5);
     if (index5 > -1) { 
@@ -194,6 +205,8 @@ gameButton5.addEventListener('click', () =>  {
 
 gameButton6.addEventListener('click', () =>  {
     gameButton6.innerText = ("X");
+    let button = document.getElementById("6");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("6").disabled = true;
     let index6 = gameSquares.indexOf(gameButton6);
     if (index6 > -1) { 
@@ -204,6 +217,8 @@ gameButton6.addEventListener('click', () =>  {
 
 gameButton7.addEventListener('click', () =>  {
     gameButton7.innerText = ("X");
+    let button = document.getElementById("7");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("7").disabled = true;
     let index7 = gameSquares.indexOf(gameButton7);
     if (index7 > -1) { 
@@ -214,6 +229,8 @@ gameButton7.addEventListener('click', () =>  {
 
 gameButton8.addEventListener('click', () =>  {
     gameButton8.innerText = ("X");
+    let button = document.getElementById("8");
+    button.style.backgroundColor="#14BDEB"
     document.getElementById("8").disabled = true;
     let index8 = gameSquares.indexOf(gameButton8);
     if (index8 > -1) { 
@@ -223,19 +240,22 @@ gameButton8.addEventListener('click', () =>  {
 })
 
 function computerMove() {
+
     if (gameSquares.length > 0) {
         document.getElementById("currentPlayer").innerText="Computer's Turn!";
     } else {
-        document.getElementById("currentPlayer").innerText="It's a tie!";
+        document.getElementById("currentPlayer").innerText="Game Over - It's a tie!"
+        // document.getElementById("winner").innerText="It's a tie!";
         throw new Error;
     }; 
-    setTimeout(turn, 1000)
+    setTimeout(turn, 50)
     function turn() {
     if (gameSquares.length > 0) {
     let computerTurn = Math.floor(Math.random()*gameSquares.length);
     let computerSelection = gameSquares[computerTurn];
     computerSelection.innerText = ("O");
     computerSelection.disabled = true;
+    computerSelection.style.backgroundColor="#B37BA4"
     for (var i = 0; i < gameSquares.length; i++) { 
     if (gameSquares[i] == gameSquares[computerTurn]) { 
         let indexC = gameSquares.indexOf(gameSquares[i]);
@@ -245,7 +265,7 @@ function computerMove() {
     checkComputerScores(); 
     setTimeout(playerBanner, 150);
     function playerBanner () {
-    document.getElementById("currentPlayer").innerText="Player 1's Turn!"
+    document.getElementById("currentPlayer").innerText="Player's Turn!"
     }
 }
 }}

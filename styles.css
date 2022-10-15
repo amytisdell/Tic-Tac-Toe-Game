@@ -4,25 +4,26 @@ Palette from coolors.co
 */
 
 .background {
-    background-color: #FAD7CA;
+    background-color: #DCCDE8;
     height: auto;
     padding-top: 1px;
 }
 
-.title, .banners {
-    color: #E6A5CC;
+.title {
+    color: #00100B;
     text-align: center;
-    font-size: 40px;
     margin-top: 10%;
 }
 
 
-.display {
-    color: #E6A5CC;
+.banners, .activePlayer {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    align-items: center;
 }
+
 
 .container {
     margin: auto;
@@ -33,7 +34,7 @@ Palette from coolors.co
 }
 
 .btn {
-    border: 2px solid #E6A5CC;
+    border: 2px solid #00100B;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -41,12 +42,23 @@ Palette from coolors.co
     font-size: 24px;
 }
 
+p {
+    margin: 5px;
+    padding: 10px;
+}
 
 .NG {
     display: flex;
     justify-content: center;
 }
 
-.playerButton {
-    background-color: blue;
+#clearBoard {
+    background-color: #D99AC5
+}
+
+.alert {
+    display: flex;
+    width:40%;    
+    text-align: center;
+
 }
