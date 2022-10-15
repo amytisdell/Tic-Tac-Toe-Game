@@ -1,0 +1,52 @@
+/*
+Palette from coolors.co
+{"Unbleached Silk":"FCDBCA","Baby Pink":"F7CECB","Orchid Pink":"F1C0CB","Cameo Pink":"ECB3CC","Kobi":"E6A5CC"}
+*/
+
+.background {
+    background-color: #FAD7CA;
+    height: auto;
+    padding-top: 1px;
+}
+
+.title, .banners {
+    color: #E6A5CC;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+
+.display {
+    color: #E6A5CC;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+
+.btn {
+    border: 2px solid #E6A5CC;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+
+.NG {
+    display: flex;
+    justify-content: center;
+}
+
+.playerButton {
+    background-color: blue;
+}
