@@ -1,4 +1,4 @@
-document.getElementById("currentPlayer").innerText="Player's Turn!";
+document.getElementById("currentPlayer").innerText="Press any square to begin";
 
 
 //GameButtons
@@ -43,42 +43,34 @@ function disableAll() {
 //Checking each player's scores 
 function checkPlayer1Scores() {
     if ((gameButton0.innerText == ("X")) && (gameButton1.innerText == ("X")) && (gameButton2.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton3.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton5.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton6.innerText == ("X")) && (gameButton7.innerText == ("X")) && (gameButton8.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton0.innerText == ("X")) && (gameButton3.innerText == ("X")) && (gameButton6.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton1.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton7.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton2.innerText == ("X")) && (gameButton5.innerText == ("X")) && (gameButton8.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton0.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton8.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
     } else if ((gameButton2.innerText == ("X")) && (gameButton4.innerText == ("X")) && (gameButton6.innerText == ("X"))) {
-        // document.getElementById("winner").innerText="Player 1 Wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Player Wins!";
         disableAll();
         throw new Error
@@ -88,42 +80,34 @@ function checkPlayer1Scores() {
 
 function checkComputerScores() {
     if ((gameButton0.innerText == ("O")) && (gameButton1.innerText == ("O")) && (gameButton2.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton3.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton5.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton6.innerText == ("O")) && (gameButton7.innerText == ("O")) && (gameButton8.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton0.innerText == ("O")) && (gameButton3.innerText == ("O")) && (gameButton6.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton1.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton7.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton2.innerText == ("O")) && (gameButton5.innerText == ("O")) && (gameButton8.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton0.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton8.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
     } else if ((gameButton2.innerText == ("O")) && (gameButton4.innerText == ("O")) && (gameButton6.innerText == ("O"))) {
-        // document.getElementById("winner").innerText="Computer wins!";
         document.getElementById("currentPlayer").innerText="Game Over - Computer Wins!"
         disableAll();
         throw new Error;
@@ -245,10 +229,9 @@ function computerMove() {
         document.getElementById("currentPlayer").innerText="Computer's Turn!";
     } else {
         document.getElementById("currentPlayer").innerText="Game Over - It's a tie!"
-        // document.getElementById("winner").innerText="It's a tie!";
         throw new Error;
     }; 
-    setTimeout(turn, 50)
+    setTimeout(turn, 100)
     function turn() {
     if (gameSquares.length > 0) {
     let computerTurn = Math.floor(Math.random()*gameSquares.length);

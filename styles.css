@@ -39,7 +39,17 @@ Palette from coolors.co
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
+
+}
+
+.gameButton{
+    background-color: whitesmoke;
+    height: 90px;
+    width: 90px;
+    padding: 2px;
+    font-size: 40px;
+
 }
 
 p {
