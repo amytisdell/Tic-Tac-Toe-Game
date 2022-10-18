@@ -38,7 +38,29 @@ function disableAll() {
     document.getElementById("8").disabled = true;
 }
 
-
+function reenableBoard() {
+    for (let i=0; i < gameSquares.length; i++) {
+        if (gameSquares[i] == document.getElementById("0")) {
+            document.getElementById("0").disabled = false
+        } else if (gameSquares[i] == document.getElementById("1")) {
+            document.getElementById("1").disabled = false
+        } else if (gameSquares[i] == document.getElementById("2")) {
+            document.getElementById("2").disabled = false
+        } else if (gameSquares[i] == document.getElementById("3")) {
+            document.getElementById("3").disabled = false 
+        } else if (gameSquares[i] == document.getElementById("4")) {
+            document.getElementById("4").disabled = false 
+        } else if (gameSquares[i] == document.getElementById("5")) {
+            document.getElementById("5").disabled = false
+        } else if (gameSquares[i] == document.getElementById("6")) {
+            document.getElementById("6").disabled = false
+        } else if (gameSquares[i] == document.getElementById("7")) {
+            document.getElementById("7").disabled = false 
+        } else if (gameSquares[i] == document.getElementById("8")) {
+            document.getElementById("8").disabled = false 
+        } 
+    }
+}
 
 //Checking each player's scores 
 function checkPlayer1Scores() {
@@ -231,7 +253,9 @@ function computerMove() {
         document.getElementById("currentPlayer").innerText="Game Over - It's a tie!"
         throw new Error;
     }; 
-    setTimeout(turn, 100)
+    disableAll();
+    setTimeout(turn, 1500);
+    setTimeout(reenableBoard,1501)
     function turn() {
     if (gameSquares.length > 0) {
     let computerTurn = Math.floor(Math.random()*gameSquares.length);
@@ -250,5 +274,6 @@ function computerMove() {
     function playerBanner () {
     document.getElementById("currentPlayer").innerText="Player's Turn!"
     }
+    
 }
 }}
