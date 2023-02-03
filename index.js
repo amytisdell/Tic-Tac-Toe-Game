@@ -258,7 +258,24 @@ function computerMove() {
     setTimeout(reenableBoard,1501)
     function turn() {
     if (gameSquares.length > 0) {
-    let computerTurn = Math.floor(Math.random()*gameSquares.length);
+    let computerTurn = 
+    // Math.floor(Math.random()*gameSquares.length);
+    if ((gameButton0.innerText == ("O")) && (gameButton1.innerText == ("O"))) {
+        document.getElementById
+    } else  
+
+    //edit lines above to write algorith to play winning match
+    //simplest version of the problem: get the computer to try do one specific move if available or use random move using else/if statement
+    // easy mode:random numbers until two in a sequence are selected, then it will try to win.
+    /* if 0 and 1 are selected, choose 2 OR if 0 and 2 are selected, choose 3 OR if 1 and 2 are selected choose 0 (top row)
+    // if 3 and 4 are selected, choose 5 OR if 3 and 5 are selected, choose 4 OR if 4 and 5 are selected choose 3 (middle row)
+    // if 6 and 7 are selected, choose 8 OR if 6 and 8 are selected, choose 7 OR if 7 and 8 are selected choose 6 (bottom row)
+    // if 0 and 3 are selected, choose 6 OR if 0 and 6 are selected, choose 3 OR if 3 and 6 are selected choose 0 (first column)
+    // if 1 and 4 are selected, choose 7 OR if 4 and 7 are selected, choose 1 OR if 1 and 7 are selected choose 4 (middle column)
+    // if 2 and 5 are selected, choose 8 OR if 2 and 8 are selected, choose 5 OR if 5 and 8 are selected choose 2 (third column)
+    // if 0 and 4 are selected, choose 8 OR if 0 and 8 are selected, choose 4 OR if 4 and 8 are selected choose 0 (left top X)
+    // if 6 and 4 are selected, choose 2 OR if 6 and 2 are selected, choose 4 OR if 4 and 2 are selected choose 6 (left botton X) */
+
     let computerSelection = gameSquares[computerTurn];
     computerSelection.innerText = ("O");
     computerSelection.disabled = true;
