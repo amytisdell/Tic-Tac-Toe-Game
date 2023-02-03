@@ -258,11 +258,7 @@ function computerMove() {
     setTimeout(reenableBoard,1501)
     function turn() {
     if (gameSquares.length > 0) {
-    let computerTurn = 
-    // Math.floor(Math.random()*gameSquares.length);
-    if ((gameButton0.innerText == ("O")) && (gameButton1.innerText == ("O"))) {
-        document.getElementById
-    } else  
+    let computerTurn = Math.floor(Math.random()*gameSquares.length);
 
     //edit lines above to write algorith to play winning match
     //simplest version of the problem: get the computer to try do one specific move if available or use random move using else/if statement
